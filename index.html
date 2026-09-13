@@ -125,67 +125,70 @@ hr{border:none;border-top:1px solid var(--border);margin:10px 0}
         <div class="fg"><label>Dirección *</label><input id="f-dir" placeholder="Calle y número"></div>
         <div class="fg"><label>Barrio</label><input id="f-barrio" value="Las Retamas" list="barrios-list" placeholder="Nombre del barrio"><datalist id="barrios-list"><option value="Las Retamas"></datalist></div>
         <div class="fg"><label>Email</label><input id="f-email" type="email" placeholder="cliente@email.com"></div>
-        <div class="fg"><label>Cantidad de ambientes</label><input id="f-ambientes" type="number" min="1" placeholder="Ej: 5"></div>
+        <div class="fg"><label>Cantidad de zonas a regar</label><input id="f-ambientes" type="number" min="1" placeholder="Ej: 3"></div>
       </div>
     </div>
 
     <div class="card">
-      <div class="card-head"><div class="card-title">🏠 Datos del inmueble</div></div>
+      <div class="card-head"><div class="card-title">🌱 Datos del terreno / cultivo</div></div>
       <div class="card-body">
-        <div class="fg"><label>Tipo de propiedad</label>
-          <select id="f-tipo"><option>Casa</option><option>Departamento</option><option>Local comercial</option><option>Oficina</option><option>Otro</option></select>
+        <div class="fg"><label>Tipo de terreno</label>
+          <select id="f-tipo"><option>Jardín residencial</option><option>Finca / cultivo</option><option>Vivero</option><option>Espacio verde / parquizado</option><option>Otro</option></select>
         </div>
-        <div class="fg"><label>Superficie aproximada (m²)</label><input id="f-sup" type="number" placeholder="120"></div>
-        <div class="fg"><label>Plantas</label>
-          <select id="f-plantas"><option>Planta baja</option><option>Dos plantas</option><option>Tres o más plantas</option></select>
+        <div class="fg"><label>Superficie a regar (m²)</label><input id="f-sup" type="number" placeholder="120"></div>
+        <div class="fg"><label>Fuente de agua</label>
+          <select id="f-fuente"><option>Red domiciliaria</option><option>Pozo</option><option>Reservorio / cisterna</option><option>Canal de riego</option><option>Otro</option></select>
         </div>
-        <div class="fg"><label>Material de construcción</label>
-          <select id="f-material"><option>Mampostería</option><option>Steel frame</option><option>Container</option><option>Mixto</option><option>Otro</option></select>
+        <div class="fg"><label>Tipo de vegetación</label>
+          <select id="f-plantas"><option>Césped</option><option>Arbustos y plantas</option><option>Árboles</option><option>Huerta</option><option>Vid / frutales</option><option>Mixto</option></select>
         </div>
-        <div class="fg"><label>¿Tiene alarma previa?</label>
+        <div class="fg"><label>Tipo de suelo</label>
+          <select id="f-material"><option>Franco</option><option>Arcilloso</option><option>Arenoso</option><option>Mixto</option><option>No sé</option></select>
+        </div>
+        <div class="fg"><label>¿Tiene sistema de riego previo?</label>
           <select id="f-alarma"><option>No</option><option>Sí</option></select>
         </div>
-        <div class="fg"><label>¿Tiene perro?</label>
+        <div class="fg"><label>¿Tiene perro en el lugar?</label>
           <select id="f-perro"><option>No</option><option>Sí</option></select>
         </div>
-        <div class="fg"><label>Horario de uso</label>
-          <select id="f-horario"><option>Siempre habitado</option><option>Comercio (horario fijo)</option><option>Fin de semana</option><option>Vacacional</option></select>
+        <div class="fg"><label>Horario de riego preferido</label>
+          <select id="f-horario"><option>Madrugada</option><option>Mañana temprano</option><option>Tarde/noche</option><option>Sin preferencia</option></select>
         </div>
       </div>
     </div>
 
     <div class="card">
-      <div class="card-head"><div class="card-title">📦 Modelo Zpro sugerido</div></div>
+      <div class="card-head"><div class="card-title">📦 Modelo AquaSeries sugerido</div></div>
       <div class="card-body">
         <div class="fg"><label>Modelo</label>
-          <select id="f-modelo"><option>Base</option><option>Energy</option><option>Comfort</option><option>Black</option></select>
+          <select id="f-modelo"><option>AquaOne</option><option>AquaDuo</option><option>AquaTrio</option><option>AquaPro</option><option>AquaMax</option></select>
         </div>
       </div>
     </div>
 
     <div class="card">
-      <div class="card-head"><div class="card-title">📡 Sensores y ubicaciones</div></div>
+      <div class="card-head"><div class="card-title">💧 Sensores y ubicaciones</div></div>
       <div class="card-body" id="sensores-container"></div>
     </div>
 
     <div class="card">
-      <div class="card-head"><div class="card-title">🌐 Red Zigbee</div></div>
+      <div class="card-head"><div class="card-title">🌐 Conectividad WiFi</div></div>
       <div class="card-body">
-        <div class="fg"><label>Ubicación del router Zigbee</label><input id="f-router" placeholder="Ej: Pasillo central, primer piso"></div>
+        <div class="fg"><label>Ubicación del router / gateway</label><input id="f-router" placeholder="Ej: Casa central, cerca del tablero"></div>
         <div class="fg"><label>Distancia al sensor más alejado (mts)</label><input id="f-dist" type="number" placeholder="15"></div>
-        <div class="fg"><label>Obstáculos para la señal</label><input id="f-obstaculos" placeholder="Ej: Paredes gruesas, sótano, metal"></div>
+        <div class="fg"><label>Obstáculos para la señal</label><input id="f-obstaculos" placeholder="Ej: Paredes gruesas, galpón metálico"></div>
       </div>
     </div>
 
     <div class="card">
-      <div class="card-head"><div class="card-title">🏠 Instalación</div></div>
+      <div class="card-head"><div class="card-title">🔧 Instalación</div></div>
       <div class="card-body">
         <div class="fg"><label>Ubicación router WiFi</label><input id="f-wifi-ubicacion" placeholder="Ej: Living, arriba del router de Fibertel"></div>
         <div class="fg full"><label>Detalles router WiFi</label><input id="f-wifi-detalle" placeholder="Ej: Señal buena, sin obstáculos"></div>
-        <div class="fg"><label>Ubicación central</label><input id="f-central-ubicacion" placeholder="Ej: Garage, pared lateral"></div>
-        <div class="fg full"><label>Detalles central</label><input id="f-central-detalle" placeholder="Ej: Cerca de toma corriente, espacio para caja"></div>
-        <div class="fg"><label>Salida para sirena</label><input id="f-sirena-ubicacion" placeholder="Ej: Frente exterior, bajo techo"></div>
-        <div class="fg full"><label>Detalles sirena</label><input id="f-sirena-detalle" placeholder="Ej: Cable a pasar por pared, necesita soporte"></div>
+        <div class="fg"><label>Ubicación controlador (ESP32)</label><input id="f-central-ubicacion" placeholder="Ej: Galpón, pared lateral"></div>
+        <div class="fg full"><label>Detalles controlador</label><input id="f-central-detalle" placeholder="Ej: Cerca de toma corriente, espacio para caja"></div>
+        <div class="fg"><label>Ubicación válvula principal</label><input id="f-sirena-ubicacion" placeholder="Ej: Entrada del reservorio"></div>
+        <div class="fg full"><label>Detalles válvulas</label><input id="f-sirena-detalle" placeholder="Ej: Cable a pasar por zanja, necesita gabinete"></div>
       </div>
     </div>
 
@@ -258,7 +261,7 @@ hr{border:none;border-top:1px solid var(--border);margin:10px 0}
 <script src="drive-sync.js"></script>
 <script>
 const SKEY = 'riego_relev_v1';
-const SENSORES_TIPOS = ['Puerta','Ventana','PuertaVentana','Botón','Vibración','Agua','Interruptor s/neutro','Interruptor router'];
+const SENSORES_TIPOS = ['Sensor de humedad (Mi Flora)','Sensor de nivel de reservorio','Sensor de temperatura (DS18B20)','Actuador de válvula','Sensor de caudal','Estación meteorológica'];
 
 function defData(){ return {nid:1, relevamientos:[]}; }
 let DB;
@@ -347,7 +350,7 @@ function renderSensores(){
       const ubics=Array.from({length:s.qty},(_,i)=>`
         <div class="fg" style="margin-bottom:6px;margin-top:6px">
           <label>${t} ${i+1} — Ubicación</label>
-          <input placeholder="Ej: Puerta principal" value="${s.ubicaciones[i]||''}" oninput="sensores['${t}'].ubicaciones[${i}]=this.value">
+          <input placeholder="Ej: Zona norte, cerca del reservorio" value="${s.ubicaciones[i]||''}" oninput="sensores['${t}'].ubicaciones[${i}]=this.value">
         </div>`).join('');
       return `<div class="sensor-row">
         <div class="sensor-tipo">${t}</div>
@@ -382,6 +385,7 @@ function guardarRel(){
     ambientes:document.getElementById('f-ambientes')?document.getElementById('f-ambientes').value:'',
     tipo:document.getElementById('f-tipo').value,
     sup:document.getElementById('f-sup').value,
+    fuente:document.getElementById('f-fuente')?document.getElementById('f-fuente').value:'',
     plantas:document.getElementById('f-plantas').value,
     material:document.getElementById('f-material').value,
     alarma:document.getElementById('f-alarma').value,
@@ -442,19 +446,20 @@ function verRel(id){
       <button class="btn btn-sm" style="flex:1" onclick="exportarUno(${r.id})">📤 Exportar</button>
     </div>
     <div class="card">
-      <div class="card-head"><div class="card-title">👤 Cliente e inmueble</div></div>
+      <div class="card-head"><div class="card-title">🌱 Cliente y terreno</div></div>
       <div class="card-body" style="font-size:13px">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
           <div><div style="font-size:10px;color:var(--text2);font-weight:700;text-transform:uppercase">Teléfono</div><div>${r.tel}</div></div>
           <div><div style="font-size:10px;color:var(--text2);font-weight:700;text-transform:uppercase">Email</div><div>${r.email||'\u2014'}</div></div>
-          <div><div style="font-size:10px;color:var(--text2);font-weight:700;text-transform:uppercase">Ambientes</div><div>${r.ambientes?r.ambientes+' amb':'\u2014'}</div></div>
-          <div><div style="font-size:10px;color:var(--text2);font-weight:700;text-transform:uppercase">Tipo</div><div>${r.tipo}</div></div>
+          <div><div style="font-size:10px;color:var(--text2);font-weight:700;text-transform:uppercase">Zonas a regar</div><div>${r.ambientes?r.ambientes+' zonas':'\u2014'}</div></div>
+          <div><div style="font-size:10px;color:var(--text2);font-weight:700;text-transform:uppercase">Tipo de terreno</div><div>${r.tipo}</div></div>
           <div><div style="font-size:10px;color:var(--text2);font-weight:700;text-transform:uppercase">Superficie</div><div>${r.sup?r.sup+' m²':'—'}</div></div>
-          <div><div style="font-size:10px;color:var(--text2);font-weight:700;text-transform:uppercase">Plantas</div><div>${r.plantas}</div></div>
-          <div><div style="font-size:10px;color:var(--text2);font-weight:700;text-transform:uppercase">Material</div><div>${r.material}</div></div>
-          <div><div style="font-size:10px;color:var(--text2);font-weight:700;text-transform:uppercase">Alarma previa</div><div>${r.alarma}</div></div>
+          <div><div style="font-size:10px;color:var(--text2);font-weight:700;text-transform:uppercase">Fuente de agua</div><div>${r.fuente||'—'}</div></div>
+          <div><div style="font-size:10px;color:var(--text2);font-weight:700;text-transform:uppercase">Vegetación</div><div>${r.plantas}</div></div>
+          <div><div style="font-size:10px;color:var(--text2);font-weight:700;text-transform:uppercase">Tipo de suelo</div><div>${r.material}</div></div>
+          <div><div style="font-size:10px;color:var(--text2);font-weight:700;text-transform:uppercase">Riego previo</div><div>${r.alarma}</div></div>
           <div><div style="font-size:10px;color:var(--text2);font-weight:700;text-transform:uppercase">Perro</div><div>${r.perro}</div></div>
-          <div><div style="font-size:10px;color:var(--text2);font-weight:700;text-transform:uppercase">Horario</div><div>${r.horario}</div></div>
+          <div><div style="font-size:10px;color:var(--text2);font-weight:700;text-transform:uppercase">Horario preferido</div><div>${r.horario}</div></div>
         </div>
       </div>
     </div>
@@ -462,13 +467,13 @@ function verRel(id){
       <div class="card-head"><div class="card-title">📦 Modelo: ${r.modelo}</div></div>
     </div>
     <div class="card">
-      <div class="card-head"><div class="card-title">📡 Sensores</div></div>
+      <div class="card-head"><div class="card-title">💧 Sensores</div></div>
       <div class="card-body">${sensorList||'<div style="color:var(--text3)">Sin sensores registrados</div>'}</div>
     </div>
     <div class="card">
-      <div class="card-head"><div class="card-title">🌐 Red Zigbee</div></div>
+      <div class="card-head"><div class="card-title">🌐 Conectividad WiFi</div></div>
       <div class="card-body" style="font-size:13px">
-        <div style="margin-bottom:6px"><span style="color:var(--text2);font-size:11px;font-weight:700;text-transform:uppercase">Router: </span>${r.router||'—'}</div>
+        <div style="margin-bottom:6px"><span style="color:var(--text2);font-size:11px;font-weight:700;text-transform:uppercase">Router / gateway: </span>${r.router||'—'}</div>
         <div style="margin-bottom:6px"><span style="color:var(--text2);font-size:11px;font-weight:700;text-transform:uppercase">Distancia máx.: </span>${r.distancia?r.distancia+' mts':'—'}</div>
         <div><span style="color:var(--text2);font-size:11px;font-weight:700;text-transform:uppercase">Obstáculos: </span>${r.obstaculos||'—'}</div>
       </div>
@@ -490,14 +495,15 @@ function editarRel(id){
   document.getElementById('f-barrio').value=r.barrio||'';
   const fem=document.getElementById('f-email'); if(fem) fem.value=r.email||'';
   const famb=document.getElementById('f-ambientes'); if(famb) famb.value=r.ambientes||'';
-  document.getElementById('f-tipo').value=r.tipo||'Casa';
+  document.getElementById('f-tipo').value=r.tipo||'Jardín residencial';
   document.getElementById('f-sup').value=r.sup||'';
-  document.getElementById('f-plantas').value=r.plantas||'Planta baja';
-  document.getElementById('f-material').value=r.material||'Mampostería';
+  const ffu=document.getElementById('f-fuente'); if(ffu) ffu.value=r.fuente||'Red domiciliaria';
+  document.getElementById('f-plantas').value=r.plantas||'Césped';
+  document.getElementById('f-material').value=r.material||'Franco';
   document.getElementById('f-alarma').value=r.alarma||'No';
   document.getElementById('f-perro').value=r.perro||'No';
-  document.getElementById('f-horario').value=r.horario||'Siempre habitado';
-  document.getElementById('f-modelo').value=r.modelo||'Base';
+  document.getElementById('f-horario').value=r.horario||'Sin preferencia';
+  document.getElementById('f-modelo').value=r.modelo||'AquaOne';
   document.getElementById('f-router').value=r.router||'';
   document.getElementById('f-dist').value=r.distancia||'';
   document.getElementById('f-obstaculos').value=r.obstaculos||'';
